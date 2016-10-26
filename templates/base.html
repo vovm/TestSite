@@ -1,0 +1,42 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block meta_block %}
+
+    {% endblock %}
+    
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+  <div class="masthead">
+  	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <ul class="nav navbar-nav">
+	      	<li><a href="{% url 'parse' %}">Parse</a></li>
+      		<li><a href="{% url 'show' %}">Show data</a></li>
+        </ul>
+	  </div>
+	</nav>
+  </div>
+  <div class="content">
+    {% block content_block %}
+
+    {% endblock %}
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block meta_block %}
+    <title>Show data</title>
+
+{% endblock %}
+
+{% block content_block %}
+    <form method="GET" action="">
+        {{form }}
+    </form>
+    <div id="chart_container"></div>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+
+{% endblock %}

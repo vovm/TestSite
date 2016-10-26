@@ -1,0 +1,15 @@
+*.sqlite3
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.swn
+*.esproj
+.idea
+*~
+git_ignore
+build
+.noseids
+media
+*.dat
+.env

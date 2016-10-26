@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block meta_block %}
+    <title>Parse</title>
+{% endblock %}
+
+{% block content_block %}
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>{{ form.file_name }}</p>
+    <p><sup>*Only .csv files</sup></p>
+    <button class="btn btn-primary" type="submit">Upload</button>
+  </form>
+
+{% endblock %}
